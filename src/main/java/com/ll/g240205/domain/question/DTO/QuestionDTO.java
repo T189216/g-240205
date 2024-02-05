@@ -1,4 +1,4 @@
-package com.ll.g240205.domain.answer.DTO;
+package com.ll.g240205.domain.question.DTO;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
-public class AnswerDTO {
+public class QuestionDTO {
     private Integer id;
 
     private String content;
