@@ -1,5 +1,6 @@
 package com.ll.g240205.domain.answer.entity;
 
+import com.ll.g240205.domain.question.entity.Question;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,5 +20,6 @@ public class Answer {
 
     private LocalDateTime createDate;
 
-    // Question 연결해야 함
+    @ManyToOne
+    private Question question;
 }
