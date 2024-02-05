@@ -1,10 +1,12 @@
 package com.ll.g240205.domain.question.entity;
 
+import com.ll.g240205.domain.answer.entity.Answer;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter
@@ -22,10 +24,10 @@ public class Question {
 
     private LocalDateTime createDate;
 
-    @ManyToOne
-    private Question question;
+    @OneToMany(mappedBy = "question", cascade = CascadeType.REMOVE)
+    private List<Answer> answerList;
 
-    // author 연결해야함
+    // 유저 추가
 
     private LocalDateTime modifyDate;
 }
