@@ -10,6 +10,8 @@ import java.time.LocalDateTime;
 public class QuestionDTO {
     private Integer id;
 
+    private String subject;
+
     private String content;
 
     private LocalDateTime createDate;
